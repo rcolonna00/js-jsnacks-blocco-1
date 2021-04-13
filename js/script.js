@@ -71,8 +71,8 @@ console.log( 'somma del peso di tutte le zucchine ' + pesoZucchine );
 var zucchinePiuCorte = [];
 var zucchinePiuLunghe = [];
 
-var piuCorte = 0;
-var piuLunghe = 0;
+var pesoZucchineCorte = 0;
+var pesoZucchinePiuLunghe = 0;
 var lunghezzaStandard = 15;
 
 for ( var j = 0; j < zucchine.length; j++ ) {
@@ -80,10 +80,10 @@ for ( var j = 0; j < zucchine.length; j++ ) {
 
     if ( zucchineJ.lunghezza <= lunghezzaStandard ) {
         zucchinePiuCorte.push(zucchineJ)
-        piuCorte = piuCorte + zucchineJ.lunghezza;
+        pesoZucchineCorte = pesoZucchineCorte + zucchineJ.peso;
     } else {
         zucchinePiuLunghe.push(zucchineJ)
-        piuLunghe = piuLunghe + zucchineJ.lunghezza;
+        pesoZucchinePiuLunghe = pesoZucchinePiuLunghe + zucchineJ.peso;
     }
 
 };
@@ -91,7 +91,7 @@ for ( var j = 0; j < zucchine.length; j++ ) {
 console.log(zucchinePiuCorte);
 console.log(zucchinePiuLunghe);
 
-console.log( 'somma lunghezza zucchine superiori a 15cm ' + piuLunghe );
-console.log( 'somma lunghezza zucchine inferiori a 15cm ' + piuCorte );
+console.log( 'peso zucchine inferiori a 15cm ' + pesoZucchineCorte );
+console.log( 'peso zucchine superiori a 15cm ' + pesoZucchinePiuLunghe );
 
 
