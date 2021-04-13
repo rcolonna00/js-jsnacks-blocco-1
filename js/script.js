@@ -58,9 +58,9 @@ console.log(zucchine)
 pesoZucchine = 0;
 
 for ( var i = 0; i < zucchine.length; i++ ) {
-    ZucchineI = zucchine[i];
+    zucchineI = zucchine[i];
 
-    pesoZucchine = pesoZucchine + ZucchineI.peso;
+    pesoZucchine = pesoZucchine + zucchineI.peso;
     //console.log(pesoZucchine);
 };
 
@@ -68,6 +68,8 @@ console.log( 'somma del peso di tutte le zucchine ' + pesoZucchine );
 
 //---------------ESERCIZIO 2
 //utilizzo il primo array delle 10 zucchine
+var zucchinePiuCorte = [];
+var zucchinePiuLunghe = [];
 
 var piuCorte = 0;
 var piuLunghe = 0;
@@ -77,12 +79,17 @@ for ( var j = 0; j < zucchine.length; j++ ) {
     zucchineJ = zucchine[j];
 
     if ( zucchineJ.lunghezza <= lunghezzaStandard ) {
+        zucchinePiuCorte.push(zucchineJ)
         piuCorte = piuCorte + zucchineJ.lunghezza;
     } else {
+        zucchinePiuLunghe.push(zucchineJ)
         piuLunghe = piuLunghe + zucchineJ.lunghezza;
     }
 
 };
+
+console.log(zucchinePiuCorte);
+console.log(zucchinePiuLunghe);
 
 console.log( 'somma lunghezza zucchine superiori a 15cm ' + piuLunghe );
 console.log( 'somma lunghezza zucchine inferiori a 15cm ' + piuCorte );
